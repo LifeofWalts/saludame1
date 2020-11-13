@@ -47,6 +47,7 @@ app.get('/:param1', (req, res) =>{
 
     // console.log(nombre)
     // console.log(param1);
+    res.type('text/html');
     res.send('<h1>Hola ' + nombre + '!</h1>');
     
 })
