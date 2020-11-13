@@ -35,20 +35,28 @@
 
 
 
-const express = require("express");
+const express = require('express');
 const app = express();
 
 
-app.get('/:param1', (req, res) =>{
+app.get('/', (req, res) =>{
     const {nombre} =req.query;
-    const {param1} = req.params;
+
+    if (nombre === "" || nombre === undefined) {
+        
+        res.send("Hola desconocido!");
+    } else {
+        res.send(`<h1> Hola ${nombre}!</h1>`);
+        }
+    
+
+
     // console.log(req.query);
     // console.log(req.params);
 
     // console.log(nombre)
     // console.log(param1);
-    res.type('text/html');
-    res.send('<h1>Hola ' + nombre + '!</h1>');
+    
     
 })
 
