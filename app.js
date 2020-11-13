@@ -46,7 +46,7 @@ app.get('/', (req, res) =>{
         
         res.send("Hola desconocido!");
     } else {
-        res.send(`<h1> Hola ${nombre}!</h1>`);
+        res.send(`<h1>Hola ${nombre}!</h1>`);
         }
     
 
